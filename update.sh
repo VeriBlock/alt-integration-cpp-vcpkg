@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Script to get veriblock-pop-cpp version being used in the master branch of the vBitcoin master branch and update
+# Script to get veriblock-pop-cpp version being used in the master branch of VeriBlock/vbk-ri-btc repo and update
 # the port file accordingly.
 #
 CURRENT_SHA512=$(< portfile.cmake head -n 9 | tail -n 1 | cut -f10 -d " ")
