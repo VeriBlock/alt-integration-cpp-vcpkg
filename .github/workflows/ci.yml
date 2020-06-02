@@ -12,7 +12,7 @@ on:
       - master
 
 jobs:
-  windows:
+  vcpkg:
     runs-on: windows-latest
     steps:
       - name: Clone veriblock-pop-cpp
@@ -20,7 +20,7 @@ jobs:
           Write-Host "Cloning alt-integration-cpp-vcpkg."
           cd C:/vcpkg/ports
           git submodule add --name veriblock-pop-cpp https://github.com/VeriBlock/alt-integration-cpp-vcpkg veriblock-pop-cpp
-      - name: Update vcpkg
+      - name: Install vcpkg and veriblock-pop-cpp
         run: |
           cd $env:VCPKG_INSTALLATION_ROOT
           git pull origin master
