@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+
+  pull_request:
+    branches:
+      - develop
+      - master
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Clone veriblock-pop-cpp
+        run: |
+          Write-Host "Cloning alt-integration-cpp-vcpkg."
+          cd C:/vcpkg/ports
+          git submodule add --name veriblock-pop-cpp https://github.com/VeriBlock/alt-integration-cpp-vcpkg veriblock-pop-cpp
+      - name: Update vcpkg
+        run: |
+          cd $env:VCPKG_INSTALLATION_ROOT
+          git pull origin master
+          .\bootstrap-vcpkg.bat
+          .\vcpkg install veriblock-pop-cpp:x64-windows-static
+          .\vcpkg integrate install
