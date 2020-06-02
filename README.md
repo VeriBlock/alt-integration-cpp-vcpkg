@@ -1,4 +1,5 @@
 # alt-integration-cpp-vcpkg
+![CI](https://github.com/VeriBlock/alt-integration-cpp-vcpkg/workflows/CI/badge.svg)
 
 How to use:
 
