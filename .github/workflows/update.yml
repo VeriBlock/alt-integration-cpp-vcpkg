@@ -14,8 +14,8 @@ jobs:
           bash update.sh
       - name: Commit changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
           git commit -m "Update veriblock-pop-cpp version" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
