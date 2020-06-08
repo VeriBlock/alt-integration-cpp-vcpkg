@@ -2,8 +2,8 @@ name: CI
 
 on:
   push:
-    paths:
-      - portfile.cmake
+    branches:
+      - master
 
 jobs:
   vcpkg:
