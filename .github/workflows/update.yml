@@ -21,3 +21,9 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPO_TOKEN }}
+      - name: Trigger CI via Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_TOKEN }}
+          repository: VeriBlock/alt-integration-cpp-vcpkg
+          event-type: ci

@@ -1,9 +1,8 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - master
+  repository_dispatch:
+    types: ci
 
 jobs:
   vcpkg:
