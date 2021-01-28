@@ -5,8 +5,8 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO VeriBlock/alt-integration-cpp
-        REF 23fbc01b6bea489e5da4733f63e1b8a7bf49874c
-        SHA512 f57d7b70bb39d42ec3938ea99475633bde54cba170ebb14c91d36b486e360e383407e38c0100160dc54fc49b6490c5941845b543e702f2a6cc34b0327a145650
+        REF d3101ef4f3a6daf662b595db5e9582062409941d
+        SHA512 df61b2f6e137bb12ce985d3e825e0608974ff0dc5b5db4dcb2645e56884423d8cd66343fd9a08d20222f6cbaa5ef026cbb35965ad3ac32a9c1d08e93058d8f65
         HEAD_REF master
 )
 
